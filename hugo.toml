@@ -1,0 +1,16 @@
+theme = 'ananke'
+baseURL = 'https://example.org/'
+title = 'אוכל בריא'
+
+[params]
+  mainSections = ['food']
+  custom_css = ['custom.css']
+  [params.ananke]
+    show_recent_posts = true
+
+[languages]
+  [languages.he]
+    languageCode = 'he'
+    languageDirection = 'rtl'
+    languageName = 'עברית'
+    weight = 1
