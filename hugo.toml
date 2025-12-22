@@ -1,7 +1,7 @@
 theme = 'ananke'
 defaultContentLanguage = 'he'
 baseURL = 'https://example.org/'
-title = 'אוכל בריא'
+title = 'זה בריא?'
 
 [params]
   mainSections = ['food']
