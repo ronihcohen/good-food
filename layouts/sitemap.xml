@@ -1,0 +1,21 @@
+{{- "" -}}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{{- $pages := .Site.RegularPages -}}
+{{- range $pages -}}
+  <url>
+    <loc>{{ .Permalink | html }}</loc>
+    {{ with .Lastmod }}<lastmod>{{ .Format "2006-01-02T15:04:05Z07:00" }}</lastmod>{{ end }}
+    <changefreq>monthly</changefreq>
+    {{- /* simple priority rules: homepage highest, food section higher */ -}}
+    {{- $priority := "0.5" -}}
+    {{- if eq .Kind "home" -}}
+      {{- $priority = "1.0" -}}
+    {{- else if in .RelPermalink "/food/" -}}
+      {{- $priority = "0.8" -}}
+    {{- end -}}
+    <priority>{{ $priority }}</priority>
+  </url>
+{{- end -}}
+</urlset>
