@@ -1,7 +1,7 @@
 theme = 'ananke'
 defaultContentLanguage = 'he'
 baseURL = 'https://wiseplate.blog/'
-title = 'זה בריא?'
+title = 'אוכלים חכם'
 
 [params]
   mainSections = ['food']
