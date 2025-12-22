@@ -17,3 +17,8 @@ title = 'אוכלים חכם'
     languageDirection = 'rtl'
     languageName = 'עברית'
     weight = 1
+
+
+[[menu.main]]
+  name = "רשימה מלאה"
+  url = "/food/"
