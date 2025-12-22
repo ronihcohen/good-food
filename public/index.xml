@@ -1,19 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>אוכל בריא</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on אוכל בריא</description>
-    <generator>Hugo</generator>
-    <language>he</language>
-    <lastBuildDate>Mon, 22 Dec 2025 08:21:28 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>קינואה</title>
-      <link>http://localhost:1313/food/quinoa/</link>
-      <pubDate>Mon, 22 Dec 2025 08:21:28 +0200</pubDate>
-      <guid>http://localhost:1313/food/quinoa/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;קינואה – סופרפוד קטן עם יתרונות גדולים 🌾&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;קינואה אולי נראית כמו עוד “דגן”, אבל בפועל מדובר במזון ייחודי עם ערך תזונתי מרשים שמתאים כמעט לכל אחד – ילדים, מבוגרים, ספורטאים וגם למי שמחפש תזונה מאוזנת ובריאה יותר.&lt;/p&gt;&#xA;&lt;p&gt;אז למה כל כך מומלץ להכניס קינואה לתפריט?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;🥗 חלבון מלא מן הצומח&lt;/strong&gt;&#xA;קינואה מכילה את כל 9 חומצות האמינו החיוניות – דבר נדיר יחסית במזונות מהצומח. לכן היא מקור מצוין לחלבון, במיוחד לצמחונים, טבעונים או למי שרוצה להפחית בשר בלי לוותר על ערך תזונתי.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>אוכל בריא</title><link>https://ronihcohen.github.io/good-food/</link><description>Recent content on אוכל בריא</description><generator>Hugo</generator><language>he</language><lastBuildDate>Mon, 22 Dec 2025 08:21:28 +0200</lastBuildDate><atom:link href="https://ronihcohen.github.io/good-food/index.xml" rel="self" type="application/rss+xml"/><item><title>קינואה</title><link>https://ronihcohen.github.io/good-food/food/quinoa/</link><pubDate>Mon, 22 Dec 2025 08:21:28 +0200</pubDate><guid>https://ronihcohen.github.io/good-food/food/quinoa/</guid><description>&lt;p&gt;&lt;strong&gt;קינואה – סופרפוד קטן עם יתרונות גדולים 🌾&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;קינואה אולי נראית כמו עוד “דגן”, אבל בפועל מדובר במזון ייחודי עם ערך תזונתי מרשים שמתאים כמעט לכל אחד – ילדים, מבוגרים, ספורטאים וגם למי שמחפש תזונה מאוזנת ובריאה יותר.&lt;/p&gt;
+&lt;p&gt;אז למה כל כך מומלץ להכניס קינואה לתפריט?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🥗 חלבון מלא מן הצומח&lt;/strong&gt;
+קינואה מכילה את כל 9 חומצות האמינו החיוניות – דבר נדיר יחסית במזונות מהצומח. לכן היא מקור מצוין לחלבון, במיוחד לצמחונים, טבעונים או למי שרוצה להפחית בשר בלי לוותר על ערך תזונתי.&lt;/p&gt;</description></item></channel></rss>
