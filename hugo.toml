@@ -1,6 +1,6 @@
 theme = 'ananke'
 defaultContentLanguage = 'he'
-baseURL = 'https://example.org/'
+baseURL = 'https://wiseplate.blog/'
 title = 'זה בריא?'
 
 [params]
