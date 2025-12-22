@@ -1,0 +1,15 @@
+{{/* Additional SEO meta tags */}}
+
+{{/* Keywords meta tag */}}
+{{ with .Params.tags }}
+<meta name="keywords" content="{{ delimit . " , " }}">
+{{ else }}
+{{ with .Site.Params.keywords }}
+<meta name="keywords" content="{{ delimit . " , " }}">
+{{ end }}
+{{ end }}
+
+{{/* Author meta tag */}}
+{{ with .Params.author | default .Site.Params.author }}
+<meta name="author" content="{{ . }}">
+{{ end }}
