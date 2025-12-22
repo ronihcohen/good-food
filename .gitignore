@@ -1,9 +1,9 @@
 # Hugo build output
-/public/
-/resources/_gen/
+public
+resources/_gen
 
 # Hugo cache
-/.hugo_build.lock
+.hugo_build.lock
 
 # OS files
 .DS_Store
