@@ -1,0 +1,38 @@
+/* Style for all Markdown tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+    font-family: inherit;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Header style */
+thead tr {
+    background-color: #2D3748; /* Dark gray */
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Padding for cells */
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+/* Zebra striping for rows */
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* Hover effect */
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Responsive wrapper (prevents breaking on mobile) */
+.table-wrapper {
+    overflow-x: auto;
+}
