@@ -4,7 +4,7 @@ baseURL = 'https://wiseplate.blog/'
 title = 'אוכלים חכם'
 
 [params]
-  mainSections = ['food']
+  mainSections = ['food','compare']
   custom_css = ['custom.css']
   description = "יתרונות וחסרונות תזונתיים של מזונות שונים - מידע מבוסס מחקר מדעי לתזונה בריאה"
   keywords = ["תזונה", "בריאות", "ערכים תזונתיים", "יתרונות בריאותיים", "מזון בריא", "דיאטה", "פירות", "ירקות", "חלבון", "ויטמינים"]
@@ -22,3 +22,6 @@ title = 'אוכלים חכם'
 [[menu.main]]
   name = "רשימה מלאה"
   url = "/food/"
+[[menu.main]]
+  name = "השוואה"
+  url = "/compare/"
