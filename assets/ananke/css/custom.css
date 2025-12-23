@@ -31,8 +31,3 @@ tbody tr:nth-of-type(even) {
 tbody tr:hover {
     background-color: #f1f5f9;
 }
-
-/* Responsive wrapper (prevents breaking on mobile) */
-.table-wrapper {
-    overflow-x: auto;
-}
