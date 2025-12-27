@@ -8,7 +8,9 @@ title = 'אוכלים חכם'
   favicon = "/images/favicon.png"
   custom_css = ['custom.css']
   description = "יתרונות וחסרונות תזונתיים של מזונות שונים - מידע מבוסס מחקר מדעי לתזונה בריאה"
+  description_en = "Nutritional pros and cons of various foods - Scientifically-based information for a healthy diet."
   keywords = ["תזונה", "בריאות", "ערכים תזונתיים", "יתרונות בריאותיים", "מזון בריא", "דיאטה", "פירות", "ירקות", "חלבון", "ויטמינים"]
+  keywords_en = ["Nutrition", "Health", "Nutritional Values", "Health Benefits", "Healthy Food", "Diet", "Fruits", "Vegetables", "Protein", "Vitamins"]
   [params.ananke]
     show_recent_posts = true
 
