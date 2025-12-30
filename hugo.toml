@@ -26,3 +26,6 @@ title = 'אוכלים חכם'
 [[menu.main]]
   name = "השוואה"
   url = "/compare/"
+[[menu.main]]
+  name = "ציוד ריצה"
+  url = "/run/"
