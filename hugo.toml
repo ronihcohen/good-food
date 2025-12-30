@@ -7,6 +7,7 @@ title = 'אוכלים חכם'
   mainSections = ['food','compare']
   favicon = "/images/favicon.png"
   custom_css = ['custom.css']
+  post_content_classes= "sans-serif"
   description = "יתרונות וחסרונות תזונתיים של מזונות שונים - מידע מבוסס מחקר מדעי לתזונה בריאה"
   keywords = ["תזונה", "בריאות", "ערכים תזונתיים", "יתרונות בריאותיים", "מזון בריא", "דיאטה", "פירות", "ירקות", "חלבון", "ויטמינים"]
   [params.ananke]
@@ -21,7 +22,7 @@ title = 'אוכלים חכם'
 
 
 [[menu.main]]
-  name = "רשימה מלאה"
+  name = "רשימת מאכלים"
   url = "/food/"
 [[menu.main]]
   name = "השוואה"
