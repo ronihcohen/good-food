@@ -1,10 +1,10 @@
 theme = 'ananke'
 defaultContentLanguage = 'he'
 baseURL = 'https://wiseplate.blog/'
-title = 'אוכלים חכם'
+title = 'בריא וחכם'
 
 [params]
-  mainSections = ['food','compare']
+  mainSections = ['food','compare','run']
   favicon = "/images/favicon.png"
   custom_css = ['custom.css']
   post_content_classes= "sans-serif"
