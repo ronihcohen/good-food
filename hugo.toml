@@ -28,5 +28,5 @@ title = 'מדע בתנועה'
   name = "השוואה"
   url = "/compare/"
 [[menu.main]]
-  name = "ציוד ריצה"
+  name = "ריצה"
   url = "/run/"

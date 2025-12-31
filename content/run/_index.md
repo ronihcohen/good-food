@@ -1,5 +1,5 @@
 ---
-title: "ציוד לריצה"
+title: "ריצה"
 featured_image: ""
 description: ""
 ---
