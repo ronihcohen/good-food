@@ -24,9 +24,12 @@ title = 'מדע בתנועה'
 [[menu.main]]
   name = "רשימת מאכלים"
   url = "/food/"
+  weight = 10
 [[menu.main]]
-  name = "השוואה"
+  name = "השוואת מאכלים"
   url = "/compare/"
+  weight = 20
 [[menu.main]]
   name = "ריצה"
   url = "/run/"
+  weight = 30
