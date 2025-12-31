@@ -1,7 +1,7 @@
 theme = 'ananke'
 defaultContentLanguage = 'he'
 baseURL = 'https://wiseplate.blog/'
-title = 'בריא וחכם'
+title = 'מדע בתנועה'
 
 [params]
   mainSections = ['food','compare','run']
