@@ -15,6 +15,9 @@ title = 'מדע בתנועה'
   [params.ananke]
     show_recent_posts = true
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [languages]
   [languages.he]
     languageCode = 'he'
