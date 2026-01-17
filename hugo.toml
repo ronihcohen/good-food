@@ -18,6 +18,14 @@ title = 'מדע בתנועה'
 [markup.goldmark.renderer]
   unsafe = true
 
+[markup.goldmark]
+  [markup.goldmark.parser]
+    autoHeadingID = true
+
+[markup]
+  [markup.goldmark.extensions]
+    linkify = false
+
 [languages]
   [languages.he]
     languageCode = 'he'
