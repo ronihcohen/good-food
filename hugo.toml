@@ -27,11 +27,11 @@ title = 'מדע בתנועה'
 
 
 [[menu.main]]
-  name = "רשימת מאכלים"
+  name = "אוכל
   url = "/food/"
   weight = 10
 [[menu.main]]
-  name = "השוואת מאכלים"
+  name = "מה עדיף?"
   url = "/compare/"
   weight = 20
 [[menu.main]]
