@@ -15,16 +15,14 @@ title = 'מדע בתנועה'
   [params.ananke]
     show_recent_posts = true
 
-[markup.goldmark.renderer]
-  unsafe = true
-
-[markup.goldmark]
-  [markup.goldmark.parser]
-    autoHeadingID = true
-
 [markup]
-  [markup.goldmark.extensions]
-    linkify = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
 
 [languages]
   [languages.he]
