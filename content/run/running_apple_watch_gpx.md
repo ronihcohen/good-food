@@ -1,5 +1,5 @@
 ---
-title: "ריצה עם Apple Watch וניווט מתקדם ([WorkOutDoors](https://apps.apple.com/us/app/workoutdoors/id1241909999))"
+title: "ריצה עם Apple Watch וניווט מתקדם"
 date: 2026-01-17T16:49:06+02:00
 tags: ["running", "apple watch", "technology", "navigation", "gpx", "sports science"]
 featured_image: ""
