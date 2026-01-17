@@ -15,14 +15,14 @@ title = 'מדע בתנועה'
   [params.ananke]
     show_recent_posts = true
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-    [markup.goldmark.parser]
-      [markup.goldmark.parser.attribute]
-        block = true
-        title = true
+  [markup]
+    [markup.goldmark]
+      [markup.goldmark.renderer]
+        unsafe = true
+      [markup.goldmark.parser]
+        [markup.goldmark.parser.attribute]
+          block = true
+          title = true
 
 [languages]
   [languages.he]
@@ -30,7 +30,6 @@ title = 'מדע בתנועה'
     languageDirection = 'rtl'
     languageName = 'עברית'
     weight = 1
-
 
 [[menu.main]]
   name = "אוכל
