@@ -8,7 +8,7 @@ description: "סקירה על כרוב: מקור לוויטמין C, ויטמי�
 
 ## כרוב (Brassica oleracea)
 
-כרוב משתייך לקבוצת ה־Brassicaceae (כולל [כרובית](/food/cauliflower/), ברוקולי, קולורבי) ומספק [ויטמין C](/food/supplements/vitamin-c/), [ויטמין K](/food/supplements/vitamin-k/), סיבים וגלוקוזינולטים — תרכובות שמקושרות להשפעות אנטי־דלקתיות ושיפור מערכת ההגנה התאית.
+כרוב משתייך לקבוצת ה־Brassicaceae (כולל [כרובית](/food/cauliflower/), [ברוקולי](/food/broccoli/), קולורבי) ומספק [ויטמין C](/food/supplements/vitamin-c/), [ויטמין K](/food/supplements/vitamin-k/), סיבים וגלוקוזינולטים — תרכובות שמקושרות להשפעות אנטי־דלקתיות ושיפור מערכת ההגנה התאית.
 
 ### יתרונות תזונתיים
 
