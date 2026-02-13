@@ -77,10 +77,35 @@ def build_term_map(md_files):
             print(f"Error reading {file_path}: {e}")
     return term_map
 
-def get_relative_link(source_file, target_file):
-    source_dir = os.path.dirname(source_file)
-    rel_path = os.path.relpath(target_file, source_dir)
-    return rel_path
+def get_root_relative_link(source_file, target_file):
+    # Determine the "web path" of the target_file
+    # target_file: /Users/ronih/Public/good-food/content/food/apple.md
+    # desired: /food/apple/
+    
+    # We assume standard structure where content root is .../content/
+    # But let's be robust: find "content" part of path
+    
+    parts = target_file.split(os.sep)
+    try:
+        content_index = parts.index("content")
+        # e.g. parts[content_index] is "content"
+        # path from content root: check what's after "content"
+        rel_parts = parts[content_index+1:] 
+    except ValueError:
+        # Fallback if not in "content" dir structure (e.g. testing)
+        # Just use basename without ext
+        rel_parts = [os.path.basename(target_file)]
+
+    # Remove .md extension from last part
+    if rel_parts[-1].endswith(".md"):
+        rel_parts[-1] = rel_parts[-1][:-3]
+        
+    # Handle _index special case
+    if rel_parts[-1] == "_index":
+        rel_parts.pop()
+        
+    # Build path starting with slash
+    return "/" + "/".join(rel_parts) + "/"
 
 def replace_terms_in_content(content, terms, term_map, source_file):
     # Sort by length descending
@@ -132,7 +157,7 @@ def process_text_chunk(text, regex, term_map, source_file):
         if not target_path or target_path == source_file:
             return match.group(0)
             
-        rel_link = get_relative_link(source_file, target_path)
+        rel_link = get_root_relative_link(source_file, target_path)
         return f'{prefix}[{term}]({rel_link})'
         
     return regex.sub(substitution, text)
