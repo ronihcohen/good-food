@@ -19,6 +19,7 @@ def parse_frontmatter(content):
     Manually parses basic frontmatter to extract title.
     Returns (frontmatter_string, body_string, title)
     """
+    content = content.lstrip()
     if content.startswith('---'):
         try:
             parts = content.split('---', 2)
@@ -162,24 +163,30 @@ def process_text_chunk(text, regex, term_map, source_file):
         
     return regex.sub(substitution, text)
 
+import argparse
+
 def main():
-    if len(sys.argv) > 1:
-        content_dir = sys.argv[1]
-    else:
-        content_dir = DEFAULT_CONTENT_DIR
-        
-    print(f"Scanning {content_dir}...")
-    files = get_markdown_files(content_dir)
-    term_map = build_term_map(files)
+    parser = argparse.ArgumentParser(description="Add internal links to markdown files.")
+    parser.add_argument("--source", help="Directory to scan for terms (default: content/food)", default=DEFAULT_CONTENT_DIR)
+    parser.add_argument("--target", help="Directory to update with links (default: same as source)", default=None)
+    
+    args = parser.parse_args()
+    
+    source_dir = args.source
+    target_dir = args.target if args.target else source_dir
+    
+    print(f"Scanning for terms in {source_dir}...")
+    source_files = get_markdown_files(source_dir)
+    term_map = build_term_map(source_files)
     
     print(f"Found {len(term_map)} terms/titles.")
     terms = list(term_map.keys())
     
-    # Optional: Filter out terms that are too generic if necessary
-    # For now, we trust the titles.
+    print(f"Updating files in {target_dir}...")
+    target_files = get_markdown_files(target_dir)
     
     count = 0
-    for file_path in files:
+    for file_path in target_files:
         try:
             # Skip _index.md files
             if os.path.basename(file_path) == "_index.md":
