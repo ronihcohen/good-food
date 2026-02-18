@@ -1,0 +1,27 @@
+{{- /* 
+  LCP Image Optimization Partial
+  Serves WebP with PNG fallback for hero/header images
+  Optimized for Largest Contentful Paint (LCP)
+  - No lazy loading (loading="eager")
+  - High fetch priority
+  - WebP format for faster loading
+  - Discoverable in HTML source immediately
+*/ -}}
+
+{{- $src := .src -}}
+{{- $alt := .alt | default "Featured image" -}}
+{{- $webpSrc := (replace $src ".png" ".webp") -}}
+
+{{- if $src -}}
+<picture>
+  <source srcset="{{ $webpSrc }}" type="image/webp">
+  <img 
+    src="{{ $src }}" 
+    alt="{{ $alt }}" 
+    loading="eager"
+    fetchpriority="high"
+    width="1200" 
+    height="600"
+    style="width: 100%; height: auto; display: block;">
+</picture>
+{{- end -}}

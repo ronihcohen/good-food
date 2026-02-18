@@ -1,7 +1,8 @@
 {{- /* 
   Responsive Image Partial
-  Serves WebP with PNG fallback for featured images
-  Usage: {{ partial "responsive-image.html" (dict "src" .Params.featured_image "alt" .Title) }}
+  Serves WebP with PNG fallback for inline/secondary images
+  For LCP-critical images, use lcp-image.html instead
+  Usage: {{ partial "responsive-image.html" (dict "src" "/images/icon.png" "alt" "Icon") }}
 */ -}}
 
 {{- $src := .src -}}
@@ -11,6 +12,6 @@
 {{- if $src -}}
 <picture>
   <source srcset="{{ $webpSrc }}" type="image/webp">
-  <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" width="800" height="400">
+  <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" width="800" height="400" decoding="async">
 </picture>
 {{- end -}}
