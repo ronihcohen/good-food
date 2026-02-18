@@ -1,5 +1,6 @@
 {{/* LCP Optimization CSS */}}
-<link rel="stylesheet" href="{{ "css/lcp-optimization.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/lcp-optimization.css" | relURL }}" media="print" onload="this.media='all'; this.onload=null;">
+<noscript><link rel="stylesheet" href="{{ "css/lcp-optimization.css" | relURL }}"></noscript>
 
 {{/* Additional SEO meta tags */}}
 
