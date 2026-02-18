@@ -2,6 +2,8 @@ theme = 'ananke'
 defaultContentLanguage = 'he'
 baseURL = 'https://wiseplate.blog/'
 title = 'מדע בתנועה'
+trailingSlash = true
+canonifyURLs = true
 
 [params]
   mainSections = ['food','compare','run']
