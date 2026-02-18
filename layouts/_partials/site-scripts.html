@@ -1,0 +1,19 @@
+{{/* Optimized Site Scripts Partial
+   Reduces JavaScript payload by:
+   - Deferring non-critical scripts
+   - Lazy-loading optional features (comments)
+   - Using fetchpriority="low" for non-critical JS
+   - Adding async where safe
+*/}}
+
+{{/* Load Commento comments only if enabled and on post pages */}}
+{{ if and (site.Params.commentoPath) (.IsPage) (eq .Section "food") }}
+  <div id="commento"></div>
+  <script 
+    defer 
+    src="{{ site.Params.commentoPath | default "https://cdn.commento.io/js/commento.js" }}"
+    fetchpriority="low"
+    integrity="sha384-nRKhpqgWYGNKzP1eXr8cKEuzhYhXDd9lPf5AQZG0kv0bKDgVzqUpyUXnXA3PNgvx"
+    crossorigin="anonymous">
+  </script>
+{{ end }}

@@ -6,8 +6,8 @@
   
   {{/* LCP Optimization: Preload WebP image and use eager loading */}}
   {{ $webpImage := (replace $featured_image ".png" ".webp") }}
-  <link rel="preload" as="image" href="{{ $webpImage }}" type="image/webp">
-  <link rel="preload" as="image" href="{{ $featured_image }}" type="image/png">
+  <link rel="preload" as="image" href="{{ $webpImage }}" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="{{ $featured_image }}" type="image/png" fetchpriority="high">
   
   <header class="{{ $featured_image_class }}" style="background-image: url('{{ $webpImage }}'), url('{{ $featured_image }}');">
     <div class="{{ $cover_dimming_class }}">
