@@ -1,0 +1,16 @@
+{{- /* 
+  Responsive Image Partial
+  Serves WebP with PNG fallback for featured images
+  Usage: {{ partial "responsive-image.html" (dict "src" .Params.featured_image "alt" .Title) }}
+*/ -}}
+
+{{- $src := .src -}}
+{{- $alt := .alt | default "Image" -}}
+{{- $webpSrc := (replace $src ".png" ".webp") -}}
+
+{{- if $src -}}
+<picture>
+  <source srcset="{{ $webpSrc }}" type="image/webp">
+  <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" width="800" height="400">
+</picture>
+{{- end -}}
