@@ -1,19 +1,33 @@
 {{/* Optimized Site Scripts Partial
    Reduces JavaScript payload by:
+   - Lazy-loading Commento only when needed
    - Deferring non-critical scripts
-   - Lazy-loading optional features (comments)
    - Using fetchpriority="low" for non-critical JS
    - Adding async where safe
 */}}
 
-{{/* Load Commento comments only if enabled and on post pages */}}
+{{/* Load Commento comments only if enabled and on post pages - with lazy loading */}}
 {{ if and (site.Params.commentoPath) (.IsPage) (eq .Section "food") }}
   <div id="commento"></div>
-  <script 
-    defer 
-    src="{{ site.Params.commentoPath | default "https://cdn.commento.io/js/commento.js" }}"
-    fetchpriority="low"
-    integrity="sha384-nRKhpqgWYGNKzP1eXr8cKEuzhYhXDd9lPf5AQZG0kv0bKDgVzqUpyUXnXA3PNgvx"
-    crossorigin="anonymous">
+  <script>
+    // Lazy-load Commento only when user scrolls to comments section
+    let commentoLoaded = false;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !commentoLoaded) {
+          commentoLoaded = true;
+          const script = document.createElement('script');
+          script.src = "{{ site.Params.commentoPath | default "https://cdn.commento.io/js/commento.js" }}";
+          script.defer = true;
+          script.integrity = "sha384-nRKhpqgWYGNKzP1eXr8cKEuzhYhXDd9lPf5AQZG0kv0bKDgVzqUpyUXnXA3PNgvx";
+          script.crossOrigin = "anonymous";
+          document.body.appendChild(script);
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '100px' });
+    
+    const commentSection = document.getElementById('commento');
+    if (commentSection) observer.observe(commentSection);
   </script>
 {{ end }}
