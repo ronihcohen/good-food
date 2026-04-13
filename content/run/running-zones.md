@@ -2,7 +2,7 @@
 title: "אזורי דופק בריצה: הסוד לסיבולת ושיפור ביצועים"
 date: 2026-02-13T11:00:00+02:00
 tags: ["ריצה", "פיזיולוגיה", "אימון", "בריאות"]
-featured_image: "/images/run_zones.png"
+featured_image: "/images/run_zones.webp"
 description: "מדריך מקיף על אזורי דופק (Heart Rate Zones), למה ריצה ב-Zone 2 היא הקסם האמיתי, ואיך מתאמנים נכון כדי להשתפר לאורך זמן."
 ---
 

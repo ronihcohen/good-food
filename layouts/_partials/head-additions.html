@@ -1,6 +1,11 @@
+{{/* LCP Optimization: Preload background image from <head> so browser discovers it immediately */}}
+{{ $featured_image := .Params.featured_image | default .Site.Params.featured_image }}
+{{ if $featured_image }}
+  <link rel="preload" as="image" href="{{ $featured_image | relURL }}" type="image/webp" fetchpriority="high">
+{{ end }}
+
 {{/* LCP Optimization CSS */}}
-<link rel="stylesheet" href="{{ "css/lcp-optimization.css" | relURL }}" media="print" onload="this.media='all'; this.onload=null;">
-<noscript><link rel="stylesheet" href="{{ "css/lcp-optimization.css" | relURL }}"></noscript>
+<link rel="stylesheet" href="{{ "css/lcp-optimization.css" | relURL }}">
 
 {{/* Additional SEO meta tags */}}
 

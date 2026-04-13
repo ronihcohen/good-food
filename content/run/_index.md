@@ -1,5 +1,5 @@
 ---
 title: "ריצה"
-featured_image: "/images/run.png"
+featured_image: "/images/run.webp"
 description: ""
 ---

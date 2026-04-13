@@ -33,6 +33,27 @@ canonifyURLs = true
     languageName = 'עברית'
     weight = 1
 
+# Dev server cache headers (mirrors production caching rules)
+[[server.headers]]
+  for = "/images/**"
+  [server.headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[server.headers]]
+  for = "/ananke/css/**"
+  [server.headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[server.headers]]
+  for = "/css/**"
+  [server.headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[server.headers]]
+  for = "/**/*.html"
+  [server.headers.values]
+    Cache-Control = "no-cache"
+
 [[menu.main]]
   name = "אוכל"
   url = "/food/"

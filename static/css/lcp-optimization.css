@@ -1,22 +1,7 @@
-/* LCP Image Optimization - WebP Background Images */
-
-/* For browsers supporting WebP, prefer WebP images */
-@supports (background-image: url("data:image/webp;base64,UklGRi4AAABXRUJQVlA4IDoAAAAwAQCdASoBAAEAAUAcJaACdLoB/gACAAA=")) {
-  /* WebP-supporting styles will be applied by modern browsers */
-  /* The primary style uses WebP as first image in url() fallback chain */
-}
-
 /* Ensure LCP images load with highest priority */
 [style*="background-image"] {
   background-size: cover;
   background-position: center;
-}
-
-/* Optimize image rendering for LCP */
-img[fetchpriority="high"],
-img[loading="eager"] {
-  content-visibility: auto;
-  /* Prevents layout shift while image loads */
 }
 
 /* Ensure picture elements display correctly */

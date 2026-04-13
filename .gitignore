@@ -8,3 +8,10 @@ resources/_gen
 # OS files
 .DS_Store
 Thumbs.db
+
+# Node
+node_modules/
+
+# Temp / backup
+*.bak
+reports/
