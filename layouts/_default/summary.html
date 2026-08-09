@@ -1,0 +1,23 @@
+{{ $featured_image := partials.Include "func/GetFeaturedImage.html" . }}
+{{ $section := .Section | default "default" }}
+<a href="{{ .RelPermalink }}" class="wsp-card">
+  {{ if $featured_image }}
+  <div class="wsp-card-img-wrap">
+    <img class="wsp-card-img" src="{{ $featured_image }}" alt="{{ .Title }}" loading="lazy" width="400" height="225">
+  </div>
+  {{ else }}
+  <div class="wsp-card-accent wsp-card-accent--{{ $section }}"></div>
+  {{ end }}
+  <div class="wsp-card-body">
+    {{ $sectionLabel := dict "food" "אוכל" "compare" "השוואה" "run" "ריצה" }}
+    {{ $label := index $sectionLabel $section | default $section }}
+    <span class="wsp-card-tag wsp-card-tag--{{ $section }}">{{ $label }}</span>
+    <h2 class="wsp-card-title">{{ .Title }}</h2>
+    {{ with .Description }}<p class="wsp-card-excerpt">{{ . }}</p>{{ end }}
+    {{ if not .Description }}{{ with .Summary }}<p class="wsp-card-excerpt">{{ . | plainify | truncate 120 }}</p>{{ end }}{{ end }}
+    <div class="wsp-card-footer">
+      <span class="wsp-card-link">קרא עוד ←</span>
+      <span class="wsp-card-date">{{ .Date.Format "02.01.2006" }}</span>
+    </div>
+  </div>
+</a>

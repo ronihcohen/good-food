@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="wsp-article">
+  <header class="wsp-article-header">
+    {{ $sectionLabel := dict "food" "אוכל" "compare" "השוואה" "run" "ריצה" }}
+    {{ $section := .Section | default "default" }}
+    {{ $label := index $sectionLabel $section | default $section }}
+    <a class="wsp-article-section wsp-article-section--{{ $section }}" href="{{ .Section | relURL }}">{{ $label }}</a>
+    <h1 class="wsp-article-title">{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="wsp-article-desc">{{ . }}</p>{{ end }}
+    <div class="wsp-article-meta">{{ .Date.Format "02.01.2006" }}</div>
+  </header>
+  <div class="wsp-article-body nested-copy-line-height lh-copy nested-links">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

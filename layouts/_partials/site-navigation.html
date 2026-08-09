@@ -1,0 +1,14 @@
+<nav class="wsp-nav" role="navigation" aria-label="main navigation">
+  <div class="wsp-nav-inner">
+    <a href="{{ "/" | relURL }}" class="wsp-nav-brand">{{ .Site.Title }}</a>
+    {{ if .Site.Menus.main }}
+    <ul class="wsp-nav-menu" role="list">
+      {{ range .Site.Menus.main }}
+      <li class="wsp-nav-item">
+        <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="wsp-nav-active" aria-current="page"{{ end }}>{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</nav>

@@ -1,8 +1,22 @@
-<footer class="{{ .Site.Params.background_color_class | compare.Default " bg-black" }} bottom-0 w-100 pa3"
-    role="contentinfo">
-    <div class="flex flex-column items-center">
-        <p class="f6 white-70 tc mb2">
-            המידע באתר זה מסופק למטרות מידע כללי בלבד. לקבלת ייעוץ רפואי או אבחון, יש לפנות לאיש מקצוע.
-        </p>
+<footer class="wsp-footer" role="contentinfo">
+  <div class="wsp-footer-inner">
+    <div>
+      <div class="wsp-footer-brand-name">{{ .Site.Title }}</div>
+      <div class="wsp-footer-brand-desc">{{ .Site.Params.description }}</div>
     </div>
+    {{ if .Site.Menus.main }}
+    <div>
+      <div class="wsp-footer-nav-title">ניווט</div>
+      <ul class="wsp-footer-nav-list">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+  <div class="wsp-footer-bottom">
+    המידע באתר זה מסופק למטרות מידע כללי בלבד. לקבלת ייעוץ רפואי או אבחון, יש לפנות לאיש מקצוע.<br>
+    © {{ now.Year }} {{ .Site.Title }}
+  </div>
 </footer>
